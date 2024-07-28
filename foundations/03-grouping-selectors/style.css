@@ -1,0 +1,14 @@
+.action-1, 
+.action-2 {
+    font-size: 28px;
+    font-family: 'Helvetiva', 'Times New Roman', sans-serif;
+}
+
+.action-1 {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.action-2 {
+    background-color: #ffff00;
+}
