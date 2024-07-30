@@ -1,15 +1,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+/* For this first section, small-para and para were placed in that
+order respectively, causing para to be the rule applied
+since it shares the same specificty level with small-para and it's the
+last declaration. So I just changed the order between the two, causing
+small-para to be applied.
+*/
 .para,
 .small-para {
   color: hsl(0, 0%, 0%);
-  font-weight: 800;
-}
-
-.small-para {
-  font-size: 14px;
   font-weight: 800;
 }
 
@@ -17,7 +17,15 @@ body {
   font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Again, two declarations with the same specificity, 
+so the last one being applied by the cascade.
+However, in this case, I made the first declaration block more specific by chaining .button with .confirm.*/
+.button.confirm {
   background: green;
   color: white;
   font-weight: bold;
@@ -28,8 +36,9 @@ body {
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
-
-.child {
+/*There is two class selectors, but div.text adds more specifity
+by adding a type class, so I added div.text, making the first rule more specific*/
+div.text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
